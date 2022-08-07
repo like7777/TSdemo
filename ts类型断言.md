@@ -1,9 +1,10 @@
 类型断言可以用来手动指定一个值的类型,即允许变量从一种类型更改为另一种类型
 格式:   <类型>值    or    值 as 类型
-例如:   var str = '1'
-        var str2:number = <number> <any> str
-        console.log(str2)
-
+例如:   let e : unknown
+        let s : string
+        e = "str"
+        s = e as string
+        s = <string>e
 <!-- 类型推断 -->
 var num = 2;    <!-- 类型推断为number-->
 num = "12"      <!-- 编译错误-->
